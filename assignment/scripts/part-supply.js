@@ -15,10 +15,14 @@ console.log(supplyChanges);
 
 // 3. Console log the value of the second item in the 'supplyChanges' array
 console.log('3. Second supplyChange is:');
+console.log(supplyChanges[1]);
 
 // 4. The last item was added by mistake. Remove it from the 'supplyChanges' 
 //    array & console.log the value removed.
 console.log('4. Removed item:');
+let removedItem = supplyChanges.pop();
+console.log(removedItem);
+
 
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Adding 25 to supplyChanges.');
@@ -29,7 +33,6 @@ console.log('5. Adding 25 to supplyChanges.');
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
-
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
@@ -47,3 +50,14 @@ console.log('8. Total supplies available is:');
 //    no more boxes can be filled.
 //    Then log how many boxes were filled, and how many parts are left over.
 console.log('9. Filling boxes with a "while" loop');
+let parts = 575;
+let box = 7;
+let boxes = 0;
+let leftOver = 0;
+
+while (parts >= box) {
+    parts -= box;
+    boxes++;
+    leftOver = parts;
+}
+console.log(`${boxes} boxes were filled, and ${leftOver} parts are left over.`);
